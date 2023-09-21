@@ -2,7 +2,7 @@
     "swagger": "2.0",
     "info": {
       "title": "Uber API",
-      "description": "Move your app forward with the Uber API",
+      "description": "Move your app forward with the Uber API in ibm apiconnect dicovery",
       "version": "1.0.0"
     },
     "host": "api.uber.com",
