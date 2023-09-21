@@ -3,9 +3,10 @@ name: Sync Discovered API with ApiConnect
 on: [pull_request, workflow_dispatch, push]
 
 env:
-  API_HOST: <host-name>
-  PROVIDER_ORG: <porg-name>
-  API_FILES: <file/files name>
+  API_HOST: d-j02.apiconnect.dev.automation.ibm.com
+  PROVIDER_ORG: niraimathi
+  API_FILES: gmail-api.json,mit-api.json,gmail-api.yaml,APIfolder/uber-api.json
+  #API_FOLDERS: APIfolder,APIfolderTwo
 
 jobs:
   check_changes_job:
