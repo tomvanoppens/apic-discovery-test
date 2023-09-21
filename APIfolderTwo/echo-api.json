@@ -2,7 +2,7 @@
     "swagger": "2.0",
     "info": {
       "title": "Echo API",
-      "x-ibm-name": "echo-api",
+      "x-ibm-name": "echo-api-new",
       "version": "1.1.1"
     },
     "host": "$(catalog.host)",
