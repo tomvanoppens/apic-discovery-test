@@ -2,7 +2,7 @@
     "swagger": "2.0",
     "info": {
       "title": "Uber API",
-      "description": "Move your app forward with the Uber API",
+      "description": "Move your app forward with the Uber API send to discovery service",
       "version": "1.0.1"
     },
     "host": "api.uber.com",
