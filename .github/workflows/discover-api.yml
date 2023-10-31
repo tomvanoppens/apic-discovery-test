@@ -8,8 +8,7 @@ env:
   #API_FILES: gmail-api.json
   #API_FILES: gmail-api.json,mit-api.json,gmail-api.yaml,APIfolder/uber-api.json
   API_FOLDERS: APIfolder
-  #API_FOLDERS: APIfolder,APIfolderTwo
-
+  
 jobs:
   check_changes_job:
     runs-on: 'ubuntu-20.04'
@@ -35,12 +34,7 @@ jobs:
     - name: Check API Folders changed
       id: check_apifolders_changed
       run: |
-        for i in ${API_FOLDERS/,/" "}
-          do
-           echo "$folder_updates"
-           echo "$i"
-           echo "folder_updates= $folder_updates || $(git diff --name-only --diff-filter=ACMRT ${{ github.event.before }} ${{ github.sha }} | grep $i | xargs)" >> $GITHUB_OUTPUT
-          done
+        echo "folder_updates=$(git diff --name-only --diff-filter=ACMRT ${{ github.event.before }} ${{ github.sha }} | grep $API_FOLDERS | xargs)" >> $GITHUB_OUTPUT
     - name: Display the action-result
       run: |
         echo "Result of the action: ${{ steps.check_workflow_changed.outputs.action_updates }}"
