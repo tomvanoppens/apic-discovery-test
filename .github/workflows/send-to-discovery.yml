@@ -6,6 +6,7 @@ env:
   API_HOST: d-j02.apiconnect.dev.automation.ibm.com
   PROVIDER_ORG: niraimathi
   API_FILES: gmail-api.json,mit-api.json,APIfolderTwo/echo-api.json
+  #API_FOLDERS: APIfolder,APIfolderTwo
 
 jobs:
   run-discovery:
