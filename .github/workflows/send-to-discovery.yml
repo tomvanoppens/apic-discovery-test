@@ -1,4 +1,4 @@
-name: Sync Discovered API with ApiConnect
+name: Send Discovered API to ApiConnect 
 
 on: [pull_request, workflow_dispatch, push]
 
