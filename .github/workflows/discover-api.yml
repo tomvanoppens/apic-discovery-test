@@ -37,7 +37,9 @@ jobs:
       run: |
         for i in ${API_FOLDERS/,/" "}
           do
-           echo "folder_updates=folder_updates || $(git diff --name-only --diff-filter=ACMRT ${{ github.event.before }} ${{ github.sha }} | grep $i | xargs)" >> $GITHUB_OUTPUT
+           echo "$folder_updates"
+           echo "$i"
+           echo "folder_updates= $folder_updates || $(git diff --name-only --diff-filter=ACMRT ${{ github.event.before }} ${{ github.sha }} | grep $i | xargs)" >> $GITHUB_OUTPUT
           done
     - name: Display the action-result
       run: |
