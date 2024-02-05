@@ -20,7 +20,7 @@ jobs:
     - uses: ibm-apiconnect/apic-discovery-action@ng/catch
       id: discover-apis
       with:
-        api_host: ${{ env.API_HOST }}
+        api-host: ${{ env.API_HOST }}
         provider_org: ${{ env.PROVIDER_ORG }}
         api_key: ${{ secrets.apicApikey }}
         api_files: ${{ env.API_FILES }}
