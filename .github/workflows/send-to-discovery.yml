@@ -21,10 +21,10 @@ jobs:
       id: discover-apis
       with:
         api-host: ${{ env.API_HOST }}
-        provider_org: ${{ env.PROVIDER_ORG }}
-        api_key: ${{ secrets.apicApikey }}
-        api_files: ${{ env.API_FILES }}
-        api_folders: ${{ env.API_FOLDERS }}
+        provider-org: ${{ env.PROVIDER_ORG }}
+        api-key: ${{ secrets.apicApikey }}
+        api-files: ${{ env.API_FILES }}
+        api-folders: ${{ env.API_FOLDERS }}
         resync_check: ${{ true }}
         git_diff: ${{ steps.difference-output.outputs.action_updates }}
     - name: Display the action-result
