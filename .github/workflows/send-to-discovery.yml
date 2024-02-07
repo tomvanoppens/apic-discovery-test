@@ -17,7 +17,7 @@ jobs:
       id: difference-output
       run: |
         echo "action_updates=$(git diff --name-only --diff-filter=ACMRT ${{ github.event.before }} ${{ github.sha }} | xargs)" >> $GITHUB_OUTPUT
-    - uses: ibm-apiconnect/apic-discovery-action@ng/debug
+    - uses: ibm-apiconnect/apic-discovery-action@ng/catch
       id: discover-apis
       with:
         api-host: ${{ env.API_HOST }}
