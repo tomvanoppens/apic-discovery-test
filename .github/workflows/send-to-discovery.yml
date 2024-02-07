@@ -3,7 +3,7 @@ name: Send Discovered API to ApiConnect
 on: [pull_request, workflow_dispatch, push]
 
 env:
-  APIHOST: us-east-a.apiconnect.automation.ibm.com
+  API_HOST: us-east-a.apiconnect.automation.ibm.com
   PROVIDER_ORG: setanta
   API_FILES: gmail-api.json,mit-api.json,APIfolderTwo/echo-api.json
   #API_FOLDERS: APIfolder,APIfolderTwo
@@ -20,11 +20,11 @@ jobs:
     - uses: ibm-apiconnect/apic-discovery-action@ng/catch
       id: discover-apis
       with:
-        apihost: ${{ env.APIHOST }}
-        providerorg: ${{ env.PROVIDER_ORG }}
-        apikey: ${{ secrets.apicApikey }}
-        apifiles: ${{ env.API_FILES }}
-        apifolders: ${{ env.API_FOLDERS }}
+        api_host: ${{ env.API_HOST }}
+        provider_org: ${{ env.PROVIDER_ORG }}
+        api_key: ${{ secrets.apicApikey }}
+        api_files: ${{ env.API_FILES }}
+        api_folders: ${{ env.API_FOLDERS }}
         resync_check: ${{ true }}
         git_diff: ${{ steps.difference-output.outputs.action_updates }}
     - name: Display the action-result
