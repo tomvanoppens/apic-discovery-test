@@ -20,11 +20,11 @@ jobs:
     - uses: ibm-apiconnect/apic-discovery-action@ng/catch
       id: discover-apis
       with:
-        api-host: ${{ env.API_HOST }}
-        provider-org: ${{ env.PROVIDER_ORG }}
-        api-key: ${{ secrets.apicApikey }}
-        api-files: ${{ env.API_FILES }}
-        api-folders: ${{ env.API_FOLDERS }}
+        apihost: ${{ env.API_HOST }}
+        providerorg: ${{ env.PROVIDER_ORG }}
+        apikey: ${{ secrets.apicApikey }}
+        apifiles: ${{ env.API_FILES }}
+        apifolders: ${{ env.API_FOLDERS }}
         resync_check: ${{ true }}
         git_diff: ${{ steps.difference-output.outputs.action_updates }}
     - name: Display the action-result
